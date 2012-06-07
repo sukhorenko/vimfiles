@@ -20,6 +20,7 @@ set nowritebackup
 set noswapfile
 syntax enable
 set autoread
+set timeout timeoutlen=200
 
 "  ---------------------------------------------------------------------------
 "  UI
@@ -41,7 +42,7 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
-set number
+" set number
 set relativenumber
 set undofile
 
@@ -51,9 +52,7 @@ set winheight=5
 set winminheight=5
 set winheight=999
 
-colorscheme solarized
-set background=light " or dark
-set t_Co=256
+colorscheme railscasts
 
 set splitbelow splitright
 
@@ -72,9 +71,9 @@ set formatoptions=n
 
 " check to make sure vim has been compiled with colorcolumn support
 " before enabling it
-if exists("+colorcolumn")
-  set colorcolumn=80
-endif
+" if exists("+colorcolumn")
+"   set colorcolumn=80
+" endif
 
 "  ---------------------------------------------------------------------------
 "  Status Line
@@ -94,7 +93,7 @@ set statusline+=\ %{rvm#statusline()}
 set statusline+=\ [line\ %l\/%L]
 
 " Colour
-hi StatusLine ctermfg=Black ctermbg=White
+" hi StatusLine ctermfg=Black ctermbg=White
 
 " Change colour of statusline in insert mode
 au InsertEnter * hi StatusLine ctermbg=DarkBlue
@@ -115,9 +114,9 @@ set hlsearch
 " turn search highlight off
 nnoremap <leader><space> :noh<cr> 
 " search (forwards)
-nmap <space> /
+" nmap <space> /
 " search (backwards)
-map <c-space> ?
+" map <c-space> ?
 
 " Center screen when scrolling search results
 nmap n nzz
@@ -240,6 +239,7 @@ let NERDTreeChDirMode = 2
 let NERDTreeDirArrows = 1
 " open file browser
 map <leader>p :NERDTreeToggle<cr>
+map <leader>t :call FindInNERDTree()<cr>
 
 " TagList
 set tags=./tags;
@@ -256,7 +256,8 @@ map <leader>rt :!ctags --extra=+f --languages=-javascript --exclude=.git --exclu
 set complete=.,w,b,u,t,i
 
 " Buffer window (find file in open buffers)
-nmap <silent> <leader>b :FufBuffer<CR>
+"nmap <silent> <leader>b :FufBuffer<CR>
+nmap <silent> <leader>b :BufExplorer<CR>
 
 " AutoClose
 let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '#{': '}'} 
@@ -315,9 +316,11 @@ map <leader>gr :topleft :split config/routes.rb<cr>
 map <leader>gg :topleft 100 :split Gemfile<cr>
 
 " Skip to Model, View or Controller
-map <Leader>m :Rmodel 
-map <Leader>v :Rview 
-map <Leader>c :Rcontroller 
+map <Leader>m :Rmodel<cr>
+map <Leader>v :Rview<cr>
+map <Leader>c :Rcontroller<cr> 
+" map <Leader>r :R 
+" map <Leader>v :A 
 
 " Other files to consider Ruby
 au BufRead,BufNewFile Gemfile,Rakefile,Thorfile,config.ru,Vagrantfile,Guardfile,Capfile set ft=ruby

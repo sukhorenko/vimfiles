@@ -5,8 +5,9 @@ task :install do
   system "vim -c BundleInstall! -c q -c q -u bundles.vim"
 
   puts 'Compile command-t extensions'
+  system 'ruby -v'
   cmds = [
-    "cd #{File.join(root, 'bundle', 'command-t', 'ruby', 'command-t')}",
+    "cd #{File.join(root, 'bundle', 'Command-T', 'ruby', 'command-t')}",
     "ruby extconf.rb",
     "make"
   ]
@@ -19,7 +20,7 @@ task :install do
     "cd #{File.join(root, 'bundle', 'snipmate-snippets')}",
     "rake deploy_local"
   ]
-
+  
   system cmds.join(' && ')
 
   puts '*' * 79
