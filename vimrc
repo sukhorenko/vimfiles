@@ -142,6 +142,14 @@ nnoremap k gk
 
 " Map ESC
 imap jj <ESC>
+" Map edit
+inoremap II <Esc>I
+inoremap AA <Esc>A
+inoremap OO <Esc>O
+inoremap CC <Esc>C
+inoremap SS <Esc>S
+inoremap DD <Esc>dd
+inoremap UU <Esc>u
 
 " ACK
 set grepprg=ack
@@ -238,8 +246,8 @@ let NERDTreeWinSize = 50
 let NERDTreeChDirMode = 2
 let NERDTreeDirArrows = 1
 " open file browser
-map <leader>p :NERDTreeToggle<cr>
-map <leader>t :call FindInNERDTree()<cr>
+map <leader>t :NERDTreeFind<cr>
+" map <leader>t :call FindInNERDTree()<cr>
 
 " TagList
 set tags=./tags;
