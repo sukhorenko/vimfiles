@@ -11,7 +11,7 @@ Introduction to Vim: http://blog.interlinked.org/tutorials/vim_tutorial.html
 
 ## Quick Install
 
-    curl https://raw.github.com/krisleech/vimfiles/master/bootstrap.sh -o - | sh
+    curl https://raw.github.com/sukhorenko/vimfiles/master/bootstrap.sh -o - | sh
 
 ## Basic Mappings
 
@@ -347,13 +347,13 @@ If you get an error `no terminal library found` install `libncurses5-dev`.
 Note: You will already have a `~/.vim` folder, either delete or move it.
 
     mv ~/.vim ~/.vim.old
-    git clone https://github.com/krisleech/vimfiles ~/.vim
+    git clone https://github.com/sukhorenko/vimfiles ~/.vim
     cd ~/.vim
     rake install
 
 or run:
 
-    curl https://raw.github.com/krisleech/vimfiles/master/bootstrap.sh -o - | sh
+    curl https://raw.github.com/sukhorenko/vimfiles/master/bootstrap.sh -o - | sh
 
 #### To update to the latest vimfiles
 
