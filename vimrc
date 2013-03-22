@@ -201,9 +201,9 @@ nmap <leader><Esc> :q!<CR>
 " EXTERNAL COPY / PASTE
 " Press F2 before and after pasting from an external Window, not required for
 " MacVim
-set pastetoggle=<F2>
-map <C-v> "+gP<CR>
-vmap <C-c> "+y
+" set pastetoggle=<F2>
+" map <C-v> "+gP<CR>
+" vmap <C-c> "+y
 
 "  ---------------------------------------------------------------------------
 "  Function Keys
@@ -324,11 +324,16 @@ map <leader>gr :topleft :split config/routes.rb<cr>
 map <leader>gg :topleft 100 :split Gemfile<cr>
 
 " Skip to Model, View or Controller
-map <Leader>m :Rmodel<cr>
-map <Leader>v :Rview<cr>
-map <Leader>c :Rcontroller<cr> 
-" map <Leader>r :R 
-" map <Leader>v :A 
+" map <Leader>m :Rmodel<cr>
+" map <Leader>v :Rview<cr>
+" map <Leader>c :Rcontroller<cr> 
+map <Leader>r :R<cr>
+map <Leader>v :A<cr>
+
+
+map <Leader>rr :VroomRunTestFile<CR>
+map <Leader>ll :VroomRunNearestTest<CR>
+
 
 " Other files to consider Ruby
 au BufRead,BufNewFile Gemfile,Rakefile,Thorfile,config.ru,Vagrantfile,Guardfile,Capfile set ft=ruby
