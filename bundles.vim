@@ -29,10 +29,9 @@ Bundle "git://github.com/godlygeek/tabular.git"
 Bundle "git://github.com/vim-scripts/Gist.vim.git"
 Bundle "git://github.com/vim-scripts/L9.git"
 Bundle "git://github.com/Bogdanp/rbrepl.vim.git"
-Bundle "git://github.com/rson/vim-conque.git"
 Bundle 'git://github.com/wincent/Command-T.git'
 Bundle "git://github.com/gmarik/snipmate.vim.git"
-Bundle "git://github.com/honza/snipmate-snippets.git"
+Bundle "git://github.com/honza/vim-snippets.git"
 Bundle 'git://github.com/altercation/vim-colors-solarized.git'
 Bundle "git://github.com/kana/vim-textobj-user.git"
 Bundle "git://github.com/nelstrom/vim-textobj-rubyblock.git"
