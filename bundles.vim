@@ -47,6 +47,7 @@ Bundle "git://github.com/tpope/vim-bundler.git"
 Bundle "git://github.com/Lokaltog/vim-powerline.git"
 Bundle "git://github.com/corntrace/bufexplorer.git"
 Bundle 'git://github.com/vim-scripts/Railscasts-Theme-GUIand256color.git'
+Bundle 'git://github.com/skalnik/vim-vroom.git'
 
 filetype plugin indent on     " and turn it back on!
 
