@@ -395,6 +395,7 @@ endif
 "  ---------------------------------------------------------------------------
 "  Misc
 "  ---------------------------------------------------------------------------
+set nofoldenable
 
 " When vimrc, either directly or via symlink, is edited, automatically reload it
 autocmd! bufwritepost .vimrc source %
