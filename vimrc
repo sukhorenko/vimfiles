@@ -331,6 +331,7 @@ map <Leader>r :R<cr>
 map <Leader>v :A<cr>
 
 
+" let g:vroom_use_spring = 1
 map <Leader>rr :VroomRunTestFile<CR>
 map <Leader>ll :VroomRunNearestTest<CR>
 

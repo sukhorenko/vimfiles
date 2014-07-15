@@ -30,7 +30,9 @@ Bundle "git://github.com/vim-scripts/Gist.vim.git"
 Bundle "git://github.com/vim-scripts/L9.git"
 Bundle "git://github.com/Bogdanp/rbrepl.vim.git"
 Bundle 'git://github.com/wincent/Command-T.git'
-Bundle "git://github.com/gmarik/snipmate.vim.git"
+Bundle "git://github.com/tomtom/tlib_vim.git"
+Bundle "git://github.com/MarcWeber/vim-addon-mw-utils.git"
+Bundle "git://github.com/garbas/vim-snipmate.git"
 Bundle "git://github.com/honza/vim-snippets.git"
 Bundle 'git://github.com/altercation/vim-colors-solarized.git'
 Bundle "git://github.com/kana/vim-textobj-user.git"
