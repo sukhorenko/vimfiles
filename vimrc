@@ -227,6 +227,10 @@ imap  <silent> <F6> <Esc> mmgg=G`m^zz
 "  Plugins
 "  ---------------------------------------------------------------------------
 
+" vim_restore
+set viewoptions=cursor,folds,slash,unix 
+" let g:skipview_files = ['*\.vim'] 
+
 " Command-T
 " find file
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
@@ -345,6 +349,7 @@ au BufRead,BufNewFile Gemfile,Rakefile,Thorfile,config.ru,Vagrantfile,Guardfile,
 
 let coffee_compile_vert = 1
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
+au BufNewFile,BufReadPost *.js setl foldmethod=syntax
 
 "  ---------------------------------------------------------------------------
 "  SASS / SCSS
