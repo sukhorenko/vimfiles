@@ -227,9 +227,9 @@ imap  <silent> <F6> <Esc> mmgg=G`m^zz
 "  Plugins
 "  ---------------------------------------------------------------------------
 
-" vim_restore
-set viewoptions=cursor,folds,slash,unix 
-" let g:skipview_files = ['*\.vim'] 
+" restore_view
+set viewoptions=folds,cursor,slash,unix 
+let g:skipview_files = ['[BufExplorer]'] 
 
 " Command-T
 " find file
