@@ -128,10 +128,10 @@ imap <C-l> <ESC>$
 " Turn off arrow keys (this might not be a good idea for beginners, but it is
 " the best way to ween yourself of arrow keys on to hjkl)
 " http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>"
+" nnoremap <Left> :echoe "Use h"<CR>
+" nnoremap <Right> :echoe "Use l"<CR>
+" nnoremap <Up> :echoe "Use k"<CR>
+" nnoremap <Down> :echoe "Use j"<CR>"
 inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
@@ -239,6 +239,7 @@ map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
 
 let g:CommandTMaxHeight = 20
+let g:CommandTTraverseSCM = 'pwd'
 
 " NERDTree
 let NERDTreeShowBookmarks = 0
@@ -307,6 +308,10 @@ let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 " let g:syntastic_auto_loc_list=1
 " let g:syntastic_auto_jump=1
 
+" RuboCop
+let g:vimrubocop_keymap = 0
+nmap <leader>rr :RuboCop<cr>
+
 "  ---------------------------------------------------------------------------
 "  Ruby/Rails
 "  ---------------------------------------------------------------------------
@@ -336,8 +341,8 @@ map <Leader>v :A<cr>
 
 
 let g:vroom_use_spring = 1
-map <Leader>rr :VroomRunTestFile<CR>
-map <Leader>tt :VroomRunNearestTest<CR>
+" map <Leader>rr :VroomRunTestFile<CR>
+" map <Leader>tt :VroomRunNearestTest<CR>
 
 
 " Other files to consider Ruby
@@ -350,6 +355,7 @@ au BufRead,BufNewFile Gemfile,Rakefile,Thorfile,config.ru,Vagrantfile,Guardfile,
 let coffee_compile_vert = 1
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 au BufNewFile,BufReadPost *.js setl foldmethod=syntax
+au BufNewFile,BufReadPost *.js.erb setl foldmethod=syntax
 
 "  ---------------------------------------------------------------------------
 "  SASS / SCSS
