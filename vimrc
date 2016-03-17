@@ -141,7 +141,7 @@ nnoremap j gj
 nnoremap k gk
 
 " Map ESC
-imap jj <ESC>
+imap jk <ESC>
 " Map edit
 inoremap II <Esc>I
 inoremap AA <Esc>A
@@ -151,13 +151,8 @@ inoremap SS <Esc>S
 inoremap DD <Esc>dd
 inoremap UU <Esc>u
 
-" ACK
-set grepprg=ack
-
-" ,a to Ack (search in files)
-nnoremap <leader>a :Ack 
-
-" Ack settings: https://github.com/krisleech/vimfiles/wiki/Make-ack-ignore-files
+" the_silver_searcher
+nnoremap <leader>a :Ag 
 
 " Auto format
 map === mmgg=G`m^zz
@@ -189,7 +184,7 @@ map <leader>e :edit %%
 map <leader>v :view %%
 
 " Ignore some binary, versioning and backup files when auto-completing
-set wildignore=.svn,CVS,.git,*.swp,*.jpg,*.png,*.gif,*.pdf,*.bak,tmp,log
+set wildignore=.svn,CVS,.git,*.swp,*.jpg,*.png,*.gif,*.pdf,*.bak,tmp,log,bower_components,node_modules
 " Set a lower priority for .old files
 set suffixes+=.old
 
@@ -226,6 +221,13 @@ imap  <silent> <F6> <Esc> mmgg=G`m^zz
 "  ---------------------------------------------------------------------------
 "  Plugins
 "  ---------------------------------------------------------------------------
+
+" UltiSnip
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" If you want :UltiSnipsEdit to split your window.
+" let g:UltiSnipsEditSplit="vertical"
 
 " restore_view
 set viewoptions=folds,cursor,slash,unix 
@@ -302,7 +304,8 @@ nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
 
 " Supertab
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+" let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+" let g:SuperTabCrMapping=1
 
 " Syntastic
 " let g:syntastic_auto_loc_list=1
@@ -340,7 +343,7 @@ map <Leader>r :R<cr>
 map <Leader>v :A<cr>
 
 
-let g:vroom_use_spring = 1
+" let g:vroom_use_spring = 1
 " map <Leader>rr :VroomRunTestFile<CR>
 " map <Leader>tt :VroomRunNearestTest<CR>
 

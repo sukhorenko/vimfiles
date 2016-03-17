@@ -11,7 +11,8 @@ set runtimepath+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle "mileszs/ack.vim"
+" Bundle "mileszs/ack.vim"
+Bundle "rking/ag.vim"
 Bundle "tpope/vim-rvm"
 Bundle "tpope/vim-fugitive"
 Bundle "tpope/vim-rails"
@@ -32,7 +33,8 @@ Bundle "Bogdanp/rbrepl.vim"
 Bundle "wincent/Command-T"
 Bundle "tomtom/tlib_vim"
 Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "garbas/vim-snipmate"
+" Bundle "garbas/vim-snipmate"
+Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
 Bundle "kana/vim-textobj-user"
 Bundle "nelstrom/vim-textobj-rubyblock"
@@ -52,6 +54,17 @@ Bundle "skalnik/vim-vroom"
 Bundle "vim-scripts/restore_view.vim"
 Bundle "heartsentwined/vim-emblem"
 Bundle "ngmy/vim-rubocop"
+Bundle "vim-scripts/Align"
+Bundle "vim-scripts/SQLUtilities"
+
+Bundle "dsawardekar/ember.vim"
+Bundle "dsawardekar/portkey"
+Bundle "nono/vim-handlebars"
+
+" Bundle "tpope/vim-dispatch"
+" Bundle "SirVer/ultisnips"
+" Bundle "alexlafroscia/vim-ember-cli"
+
 
 filetype plugin indent on     " and turn it back on!
 
