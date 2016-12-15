@@ -143,16 +143,17 @@ nnoremap k gk
 " Map ESC
 imap jk <ESC>
 " Map edit
-inoremap II <Esc>I
+" inoremap II <Esc>I
 inoremap AA <Esc>A
 inoremap OO <Esc>O
-inoremap CC <Esc>C
-inoremap SS <Esc>S
-inoremap DD <Esc>dd
-inoremap UU <Esc>u
+" inoremap CC <Esc>C
+" inoremap SS <Esc>S
+" inoremap DD <Esc>dd
+" inoremap UU <Esc>u
 
-" the_silver_searcher
-nnoremap <leader>a :Ag 
+" Ack
+nnoremap <leader>a :Ack -Q 
+vnoremap <leader>a :<C-U>Ack -Q "<C-R>*"<CR>
 
 " Auto format
 map === mmgg=G`m^zz
@@ -181,7 +182,7 @@ nnoremap <leader><leader> <c-^>
 " Edit/View files relative to current directory
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
-map <leader>v :view %%
+" map <leader>v :view %%
 
 " Ignore some binary, versioning and backup files when auto-completing
 set wildignore=.svn,CVS,.git,*.swp,*.jpg,*.png,*.gif,*.pdf,*.bak,tmp,log,bower_components,node_modules
@@ -264,7 +265,7 @@ map <leader>l :TlistToggle <cr>
 let Tlist_Use_Right_Window = 1
 let Tlist_WinWidth = 60
 " Generate ctags for all bundled gems as well
-map <leader>rt :!ctags --extra=+f --languages=-javascript --exclude=.git --exclude=log -R * `rvm gemdir`/gems/* `rvm gemdir`/bundler/gems/*<CR><C-M>
+map <leader>rt :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/* `rvm gemdir`/bundler/gems/*<CR><C-M>
 
 " Use only current file to autocomplete from tags
 " set complete=.,t
@@ -415,3 +416,16 @@ set nofoldenable
 " When vimrc, either directly or via symlink, is edited, automatically reload it
 autocmd! bufwritepost .vimrc source %
 autocmd! bufwritepost vimrc source %
+
+" highlight tailing spaces
+let g:ackprg = 'ag --vimgrep'
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+" convert hashes 1.8 > 1.9
+vnoremap <F6> :s/:\([^ ]*\)\(\s*\)=>/\1:/g<CR>
+nnoremap <F6> :s/:\([^ ]*\)\(\s*\)=>/\1:/g<CR>
