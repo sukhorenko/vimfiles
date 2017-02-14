@@ -21,6 +21,7 @@ set noswapfile
 syntax enable
 set autoread
 set timeout timeoutlen=200
+set clipboard=unnamedplus
 
 "  ---------------------------------------------------------------------------
 "  UI
@@ -274,6 +275,7 @@ set complete=.,w,b,u,t,i
 " Buffer window (find file in open buffers)
 "nmap <silent> <leader>b :FufBuffer<CR>
 nmap <silent> <leader>b :BufExplorer<CR>
+let g:bufExplorerShowRelativePath=1  " Show relative paths.
 
 " AutoClose
 let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '#{': '}'} 
